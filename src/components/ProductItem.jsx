@@ -19,9 +19,8 @@ const ProductItem = ({ product }) => {
         loader={() => product.images[0]}
         src={product.images[0]}
         alt={product.title}
-        width='100%'
-        height='100%'
-        layout='responsive'
+        width={240}
+        height={240}
       />
       <div className={styles['product-info']}>
         <div>
@@ -37,6 +36,8 @@ const ProductItem = ({ product }) => {
               className={(styles['disabled'], styles['add-to-cart-btn'])}
               src={addedToCartImage}
               alt='added to cart'
+              width={50}
+              height={50}
             />
           ) : (
             <Image

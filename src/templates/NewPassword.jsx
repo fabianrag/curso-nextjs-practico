@@ -1,24 +1,43 @@
-import React from 'react';
-import '@styles/NewPassword.scss';
+import React from 'react'
+import Image from 'next/image'
+import style from '@styles/NewPassword.module.scss'
 import logo from '@logos/logo_yard_sale.svg'
 
 const NewPassword = () => {
-	return (
-		<div className="NewPassword">
-			<div className="NewPassword-container">
-				<img src={logo} alt="logo" className="logo" />
-				<h1 className="title">Create a new password</h1>
-				<p className="subtitle">Enter a new passwrd for yue account</p>
-				<form action="/" className="form">
-					<label for="password" className="label">Password</label>
-					<input type="password" id="password" placeholder="*********" className="input input-password" />
-					<label for="new-password" className="label">Password</label>
-					<input type="password" id="new-password" placeholder="*********" className="input input-password" />
-					<input type="submit" value="Confirm" className="primary-button login-button" />
-				</form>
-			</div>
-		</div>
-	);
+  return (
+    <div className={style['NewPassword']}>
+      <div className={style['NewPassword-container']}>
+        <Image src={logo} alt='logo' className={style['logo']} />
+        <h1 className={style['title']}>Create a new password</h1>
+        <p className={style['subtitle']}>Enter a new passwrd for yue account</p>
+        <form action='/' className={style['form']}>
+          <label for='password' className={style['label']}>
+            Password
+          </label>
+          <input
+            type='password'
+            id='password'
+            placeholder='*********'
+            className={(style['input'], style['input-password'])}
+          />
+          <label for='new-password' className={style['label']}>
+            Password
+          </label>
+          <input
+            type='password'
+            id='new-password'
+            placeholder='*********'
+            className={(style['input'], style['input-password'])}
+          />
+          <input
+            type='submit'
+            value='Confirm'
+            className={(style['primary-button'], style['login-button'])}
+          />
+        </form>
+      </div>
+    </div>
+  )
 }
 
-export default NewPassword;
+export default NewPassword

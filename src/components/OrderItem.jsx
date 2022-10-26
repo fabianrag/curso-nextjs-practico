@@ -23,7 +23,7 @@ const OrderItem = ({ product }) => {
       </figure>
       <p>{product?.title}</p>
       <p>${product?.price}</p>
-      <img
+      <Image
         className={(styles['pointer'], styles['more-clickable-area'])}
         src={close}
         alt='close'
